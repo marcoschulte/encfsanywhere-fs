@@ -381,7 +381,8 @@ public class Files {
 	private EncFSPath unlockedRootForPath(String path) {
 		String root = null;
 		for (Entry<String, EncFSVolume> entry : encfsVolumes.entrySet()) {
-			if (path.startsWith(entry.getKey())) {
+			String volRoot = entry.getKey();
+			if (path.equals(volRoot) || path.startsWith(volRoot.concat("/"))) {
 				root = entry.getKey();
 				break;
 			}
@@ -403,8 +404,9 @@ public class Files {
 		info.children = null;
 
 		List<String> toRemove = new ArrayList<String>();
+		String testString = path;
 		for (String key : cache.keySet()) {
-			if (key.startsWith(path)) {
+			if (key.equals(testString) || key.startsWith(testString.concat("/"))) {
 				toRemove.add(key);
 			}
 		}
