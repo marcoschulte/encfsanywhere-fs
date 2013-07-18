@@ -272,7 +272,7 @@ public class Files {
 			}
 		};
 
-		EncFSFile encFSFile = encFSFileCache.get(path.toString());
+		EncFSFile encFSFile = encFSFileCache.get(path.full);
 		if (encFSFile != null) {
 			encFSFile.listFiles(innerCallback);
 		} else {
