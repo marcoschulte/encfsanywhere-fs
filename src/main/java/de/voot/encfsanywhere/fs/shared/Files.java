@@ -39,7 +39,7 @@ import de.voot.encfsgwt.shared.mrpdaemon.EncFSVolumeBuilder.PasswordBuilder;
 
 public class Files {
 
-	private static final Logger LOG = Logger.getLogger("Files");
+	private static final Logger LOG = Logger.getLogger("de.voot.encfsanywhere.fs.shared.Files");
 
 	private class PathInfo {
 		Path path;

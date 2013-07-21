@@ -35,7 +35,7 @@ import de.voot.encfsgwt.shared.mrpdaemon.EncFSFileInfo;
 
 public class DropboxFileProvider implements FileProvider {
 
-	private static final Logger LOG = Logger.getLogger("DropboxFileProvider");
+	private static final Logger LOG = Logger.getLogger("de.voot.encfsanywhere.fs.shared.providers.DropboxFileProvider");
 
 	private DropboxWrapper dropboxWrapper;
 
